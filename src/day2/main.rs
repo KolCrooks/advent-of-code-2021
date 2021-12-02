@@ -1,5 +1,4 @@
 use std::{
-    collections::LinkedList,
     fs::File,
     io::{BufRead, BufReader},
 };
