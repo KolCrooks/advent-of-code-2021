@@ -99,8 +99,3 @@ fn part2() {
 fn is_subset(s1: &str, sub: &str) -> bool {
     sub.chars().all(|c| s1.contains(c))
 }
-
-fn try_perms(seg_map: HashMap<char, char>, segs: Vec<&str>) {
-    let mut segs_cp = segs.clone();
-    segs_cp.sort_by_key(|s| s.len());
-}
