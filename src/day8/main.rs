@@ -48,7 +48,7 @@ fn part2() {
         });
 
         let mut translation = [""; 10];
-        translation[1] = *segs.iter().find(|s| s.len() == 2).unwrap();
+        translation[1] = segs.iter().find(|s| s.len() == 2).unwrap();
         translation[7] = segs.iter().find(|s| s.len() == 3).unwrap();
         translation[8] = segs.iter().find(|s| s.len() == 7).unwrap();
         translation[4] = segs.iter().find(|s| s.len() == 4).unwrap();
@@ -98,4 +98,8 @@ fn part2() {
 
 fn is_subset(s1: &str, sub: &str) -> bool {
     sub.chars().all(|c| s1.contains(c))
+}
+
+fn intersection(s1: &str, s2: &str) -> String {
+    s1.chars().filter(|c| s2.contains(*c)).collect()
 }
