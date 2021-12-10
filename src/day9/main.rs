@@ -85,7 +85,7 @@ fn part2() {
     for low in lows {
         let mut worklist = vec![low];
         let mut seen = HashSet::new();
-        while worklist.len() > 0 {
+        while !worklist.is_empty() {
             let (i, j) = worklist.pop().unwrap();
             seen.insert((i, j));
 
